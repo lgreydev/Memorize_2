@@ -19,6 +19,9 @@
 		5E4B5E362899566F00455325 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E4B5E382899567100455325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E4B5E3B2899567100455325 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E4B5E42289BD5B600455325 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5E4B5E43289BD68F00455325 /* License.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
+		5E4B5E45289BD71D00455325 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,9 @@
 		5E4B5E282899566F00455325 = {
 			isa = PBXGroup;
 			children = (
+				5E4B5E45289BD71D00455325 /* .gitignore */,
+				5E4B5E43289BD68F00455325 /* License.md */,
+				5E4B5E42289BD5B600455325 /* README.md */,
 				5E4B5E332899566F00455325 /* Memorize_2 */,
 				5E4B5E322899566F00455325 /* Products */,
 			);
