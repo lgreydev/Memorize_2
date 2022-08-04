@@ -9,17 +9,42 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack(alignment: .leading) {
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(lineWidth: 3)
+        HStack {
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(lineWidth: 3)
+                Text("Hello, world!!!")
+                    .padding([.top, .bottom], 20)
+                    .border(.green)
+            }
 
-            Text("Hello, world!!!")
-                .padding([.top, .bottom], 20)
-                .border(.green)
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(lineWidth: 3)
+                Text("Hello, world!!!")
+                    .padding([.top, .bottom], 20)
+                    .border(.green)
+            }
+
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(lineWidth: 3)
+                Text("Hello, world!!!")
+                    .padding([.top, .bottom], 20)
+                    .border(.green)
+            }
+
+
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(lineWidth: 3)
+                Text("Hello, world!!!")
+                    .padding([.top, .bottom], 20)
+                    .border(.green)
+            }
         }
-        .padding()
+        .padding([.top, .bottom], 150)
         .foregroundColor(.red)
-
     }
 }
 
