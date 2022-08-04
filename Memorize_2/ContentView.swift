@@ -23,7 +23,9 @@ struct ContentView: View {
 
 struct CardView: View {
 
-    var isFaceUp: Bool = false
+    @State var isFaceUp: Bool = false
+
+    let cats = ["🐈", "🐈‍⬛"]
 
     var body: some View {
 
@@ -33,15 +35,20 @@ struct CardView: View {
             if isFaceUp {
                 shape.fill().foregroundColor(.white)
                 shape.stroke(lineWidth: 3)
-            Text("🤠")
+                Text(cats.randomElement() ?? "")
                 .font(.largeTitle)
                 .padding()
             } else {
                 shape.fill()
             }
         }
+        .onTapGesture {
+            isFaceUp.toggle()
+        }
     }
 }
+
+
 
 
 
