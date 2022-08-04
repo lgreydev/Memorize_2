@@ -25,12 +25,12 @@ struct CardView: View {
     var body: some View {
         ZStack() {
             RoundedRectangle(cornerRadius: 20)
+                .fill()
+            RoundedRectangle(cornerRadius: 20)
                 .stroke(lineWidth: 3)
-            Text("Hello, world!")
-                .foregroundColor(.black)
+            Text("🤠")
+                .font(.largeTitle)
                 .padding()
-                .border(.black)
-                .background(Color.red.opacity(0.3))
         }
     }
 }
@@ -41,16 +41,12 @@ struct CardView: View {
 
 
 
-
-
-
-
-
-
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.light)
+
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }
