@@ -11,14 +11,32 @@ struct ContentView: View {
 
     @State private var emojis = ["🚗", "🚜", "🚁", "🚀", "🚀", "🚌", "🚛", "🚒", "🚎", "🛻", "🏍", "✈️", "🚂", "🛳", "🛸", "🛴", "🛵"]
 
-    private var emojiCount = 4
+    @State private var emojiCount = 4
 
     var body: some View {
         VStack {
+            // MARK: Card
             HStack {
                 ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
                     CardView(content: emoji)
                 }
+            }
+
+            // MARK: Buttons
+            HStack {
+                Button(action: { emojiCount += 1 }, label: {
+                    ZStack {
+                        Text("Add Card")
+                    }
+                })
+
+                Spacer()
+
+                Button(action: { emojiCount -= 1 }, label: {
+                    ZStack {
+                        Text("Delete Card")
+                    }
+                })
             }
         }
         .padding()
@@ -26,7 +44,7 @@ struct ContentView: View {
     }
 }
 
-
+// MARK: View of Card
 struct CardView: View {
 
     @State var isFaceUp: Bool = true
@@ -54,14 +72,7 @@ struct CardView: View {
     }
 }
 
-
-
-
-
-
-
-
-
+// MARK: Previews
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
