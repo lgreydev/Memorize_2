@@ -24,23 +24,33 @@ struct ContentView: View {
 
             // MARK: Buttons
             HStack {
-                Button(action: { emojiCount += 1 }, label: {
-                    ZStack {
-                        Text("Add Card")
-                    }
-                })
-
+                remove
                 Spacer()
-
-                Button(action: { emojiCount -= 1 }, label: {
-                    ZStack {
-                        Text("Delete Card")
-                    }
-                })
+                add
             }
+            .padding(.horizontal)
+            .padding([.top], 20)
         }
         .padding()
         .foregroundColor(.red)
+    }
+}
+
+private extension ContentView {
+    var remove: some View {
+        Button(action: { emojiCount -= 1 }, label: {
+            ZStack {
+                Text("Delete Card")
+            }
+        })
+    }
+
+    var add: some View {
+        Button(action: { emojiCount += 1 }, label: {
+            ZStack {
+                Text("Add Card")
+            }
+        })
     }
 }
 
