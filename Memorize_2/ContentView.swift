@@ -9,12 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var emojis = ["🚗", "🚜", "🚁", "🚀", "🚀"]
+    @State private var emojis = ["🚗", "🚜", "🚁", "🚀", "🚀", "🚌", "🚛", "🚒", "🚎", "🛻", "🏍", "✈️", "🚂", "🛳", "🛸", "🛴", "🛵"]
+
+    private var emojiCount = 4
 
     var body: some View {
-        HStack {
-            ForEach(emojis, id: \.self) { emoji in
-                CardView(content: emoji)
+        VStack {
+            HStack {
+                ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
+                    CardView(content: emoji)
+                }
             }
         }
         .padding()
@@ -25,7 +29,7 @@ struct ContentView: View {
 
 struct CardView: View {
 
-    @State var isFaceUp: Bool = false
+    @State var isFaceUp: Bool = true
 
     var content: String
 
