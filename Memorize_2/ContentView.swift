@@ -11,17 +11,19 @@ struct ContentView: View {
 
     private var emojis = ["🚗", "🚜", "🚁", "🚀", "🚌", "🚛", "🚒", "🚎", "🛻", "🏍", "✈️", "🚂", "🛳", "🛸", "🛴", "🛵", "🚕", "⛵️", "🛰", "🚃", "🚠", "🚲", "🏎", "🚓"]
 
-    @State private var emojiCount = 12
+    @State private var emojiCount = 6
 
     var body: some View {
         VStack {
             // MARK: Card
+            ScrollView {
             LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
                 ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
                     CardView(content: emoji).aspectRatio(2/3, contentMode: .fit)
                 }
             }
             .foregroundColor(.red)
+            }
 
             Spacer(minLength: 30)
 
@@ -74,7 +76,7 @@ struct CardView: View {
         ZStack() {
             if isFaceUp {
                 shape.fill().foregroundColor(.white)
-                shape.stroke(lineWidth: 3)
+                shape.strokeBorder(lineWidth: 3)
                 Text(content)
                 .font(.largeTitle)
                 .padding()
