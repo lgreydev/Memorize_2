@@ -11,31 +11,20 @@ struct ContentView: View {
 
     private var emojis = ["🚗", "🚜", "🚁", "🚀", "🚌", "🚛", "🚒", "🚎", "🛻", "🏍", "✈️", "🚂", "🛳", "🛸", "🛴", "🛵", "🚕", "⛵️", "🛰", "🚃", "🚠", "🚲", "🏎", "🚓"]
 
-    @State private var emojiCount = 24
+    @State private var emojiCount = 20
 
     var body: some View {
         VStack {
             // MARK: Card
             ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
-                ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
-                    CardView(content: emoji).aspectRatio(2/3, contentMode: .fit)
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
+                    ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
+                        CardView(content: emoji).aspectRatio(2/3, contentMode: .fit)
+                    }
                 }
             }
-            .foregroundColor(.red)
-            }
-
-            Spacer(minLength: 30)
-
-            // MARK: Buttons
-            HStack {
-                remove
-                Spacer()
-                add
-            }
-            .font(.largeTitle)
-            .padding(.horizontal)
         }
+        .foregroundColor(.red)
         .padding()
     }
 }
@@ -47,16 +36,6 @@ private extension ContentView {
         } label: {
             ZStack {
                 Image(systemName: "minus.circle")
-            }
-        }
-    }
-
-    var add: some View {
-        Button {
-            if emojiCount < emojis.count { emojiCount += 1 }
-        } label: {
-            ZStack {
-                Image(systemName: "plus.circle")
             }
         }
     }
