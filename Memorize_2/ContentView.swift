@@ -8,19 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-
-//    let emojis = ["🚗", "🚜", "🚁", "🚀", "🚌", "🚛", "🚒", "🚎", "🛻", "🏍", "✈️", "🚂", "🛳", "🛸", "🛴", "🛵", "🚕", "⛵️", "🛰", "🚃", "🚠", "🚲", "🏎", "🚓"]
-
+    
     let viewModel: EmojiMemoryGame
 
     var body: some View {
-        VStack {
-            // MARK: Card
-            ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
-                    ForEach(viewModel.cards) { card in
-                        CardView(card: card).aspectRatio(2/3, contentMode: .fit)
-                    }
+        // MARK: Card
+        ScrollView {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
+                ForEach(viewModel.cards) { card in
+                    CardView(card: card).aspectRatio(2/3, contentMode: .fit)
+                        .onTapGesture { viewModel.choose(card) }
                 }
             }
         }
@@ -31,7 +28,7 @@ struct ContentView: View {
 
 // MARK: View of Card
 struct CardView: View {
-    let card: MemoryGame<String>.Card
+    var card: MemoryGame<String>.Card
 
     var body: some View {
         let shape = RoundedRectangle(cornerRadius: 20)
@@ -45,9 +42,6 @@ struct CardView: View {
             } else {
                 shape.fill()
             }
-        }
-        .onTapGesture {
-
         }
     }
 }

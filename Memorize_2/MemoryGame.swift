@@ -20,7 +20,7 @@ struct MemoryGame<CardContent> {
     }
 
     func choose(_ card: Card) {
-
+        print("😎")
     }
 
     struct Card: Identifiable {
