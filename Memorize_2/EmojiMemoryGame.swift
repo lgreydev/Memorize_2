@@ -10,9 +10,9 @@ import SwiftUI
 class EmojiMemoryGame {
 
     private static let emojis = ["🚗", "🚜", "🚁", "🚀", "🚌", "🚛", "🚒", "🚎", "🛻", "🏍", "✈️", "🚂", "🛳", "🛸", "🛴", "🛵", "🚕", "⛵️", "🛰", "🚃", "🚠", "🚲", "🏎", "🚓"]
-
+ 
     private static func createMemoryGame() -> MemoryGame<String> {
-        MemoryGame<String>(numberOfPairsOfCards: 4) { pairIndex in
+        MemoryGame<String>(numberOfPairsOfCards: 10) { pairIndex in
             emojis[pairIndex]
         }
     }
@@ -20,6 +20,6 @@ class EmojiMemoryGame {
     private var model = createMemoryGame()
 
     var cards: [MemoryGame<String>.Card] {
-        return model.cards
+         model.cards
     }
 }
