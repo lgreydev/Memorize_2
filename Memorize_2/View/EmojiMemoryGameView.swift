@@ -18,7 +18,7 @@ struct EmojiMemoryGameView: View {
         })
         .foregroundColor(.red)
         .padding()
-        .background(.black, ignoresSafeAreaEdges: .bottom)
+        .preferredColorScheme(.dark)
     }
 }
 
