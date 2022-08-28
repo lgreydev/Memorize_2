@@ -13,7 +13,8 @@ struct EmojiMemoryGameView: View {
 
     var body: some View {
         AspectVGrid(items: game.cards, aspectRatio: 2/3, content: { card in
-            CardView(card).aspectRatio(2/3, contentMode: .fit)
+            CardView(card)
+                .padding(4)
                 .onTapGesture { game.choose(card) }
         })
         .foregroundColor(.red)
