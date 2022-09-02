@@ -12,17 +12,27 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var game: EmojiMemoryGame
 
     var body: some View {
-        AspectVGrid(items: game.cards, aspectRatio: 2/3, content: { card in
-            CardView(card)
-                .padding(4)
-                .onTapGesture { game.choose(card) }
-        })
+        AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
+            cardView(for: card)
+        }
         .foregroundColor(.red)
         .padding()
         .preferredColorScheme(.dark)
     }
 }
 
+extension EmojiMemoryGameView {
+    @ViewBuilder
+    private func cardView(for card: EmojiMemoryGame.Card) -> some View {
+        if card.isMatched && !card.isFaceUp {
+            Rectangle().opacity(0)
+        } else {
+            CardView(card)
+                .padding(4)
+                .onTapGesture { game.choose(card) }
+        }
+    }
+}
 
 
 
