@@ -31,7 +31,7 @@ struct PieView: Shape {
             radius: radius,
             startAngle: starAngel,
             endAngle: endAngle,
-            clockwise: clockwise)
+            clockwise: !clockwise)
         p.addLine(to: center)
 
 
