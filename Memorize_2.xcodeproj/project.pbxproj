@@ -16,6 +16,7 @@
 		5EBA8F6128AFAABA00866C71 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA8F6028AFAABA00866C71 /* CardView.swift */; };
 		5EBA8F9928BA57A500866C71 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA8F9828BA57A500866C71 /* AspectVGrid.swift */; };
 		5EBA8F9B28C2113000866C71 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA8F9A28C2113000866C71 /* PieView.swift */; };
+		5EBD5F6A28CF29DD00F173F7 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD5F6928CF29DD00F173F7 /* Cardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5EBA8F6028AFAABA00866C71 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		5EBA8F9828BA57A500866C71 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 		5EBA8F9A28C2113000866C71 /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
+		5EBD5F6928CF29DD00F173F7 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				5EBA8F9828BA57A500866C71 /* AspectVGrid.swift */,
 				5EBA8F6028AFAABA00866C71 /* CardView.swift */,
 				5EBA8F9A28C2113000866C71 /* PieView.swift */,
+				5EBD5F6928CF29DD00F173F7 /* Cardify.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			files = (
 				5EBA8F9B28C2113000866C71 /* PieView.swift in Sources */,
 				5E3765AD28A3BE6D007DEC58 /* MemoryGame.swift in Sources */,
+				5EBD5F6A28CF29DD00F173F7 /* Cardify.swift in Sources */,
 				5E4B5E372899566F00455325 /* EmojiMemoryGameView.swift in Sources */,
 				5EBA8F9928BA57A500866C71 /* AspectVGrid.swift in Sources */,
 				5E4B5E352899566F00455325 /* Memorize_2App.swift in Sources */,
